@@ -1,0 +1,10 @@
+services:
+  - type: worker
+    name: headless-scraper
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: python main.py
+    envVars:
+      - key: RENDER_ENV_FILE
+        value: .env
